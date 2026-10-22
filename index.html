@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 06: Зургийн цомог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="toon-header">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="star">⭐</span>
+                <h1>АНХНЫ ХҮҮХДҮҮДЭД ЗОРИУЛСАН КОД БИЧИХ ВЕБ</h1>
+                <span class="badge">Lab 06</span>
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+
+            <nav class="toon-nav">
+                <ul>
+                    <li><a href="#" class="nav-btn yellow active">🏠 Нүүр</a></li>
+                    <li><a href="#gallery" class="nav-btn pink">🖼️ Цомог</a></li>
+                    <li><a href="#media" class="nav-btn green">🎬 Медиа</a></li>
+                    <li><a href="#" class="nav-btn blue">🎈 Тусламж</a></li>
+                    <li><button id="theme-btn" class="nav-btn theme-btn" type="button" aria-pressed="false">🌙 Dark</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="layout-wrapper">
+        <main class="main-content">
+            <section class="hero-card">
+                <h2>🌈 Хүүхдийн Код Бичих Веб-д Тавтай Морил! 🦄</h2>
+                <p>Энэ хуудас нь CSS Media Queries ашиглан Гар утас, Таблет болон Компьютер дээр алдаагүй харагдах хүүхдүүдэд анхны код оо бичихэд туслах Веб юм</p>
+            </section>
+
+            <!-- Responsive Grid Cards (Lab 5) -->
+            <section class="cards-grid">
+                <article class="toon-card card-pink">
+                    <div class="card-icon">🎮</div>
+                    <h3>Веб Зохиомж</h3>
+                    <p>Өнгөлөг Гоё Дизайнтай бас HTML &amp; CSS ашигласан вэб сайт хийх.</p>
+                    <button class="action-btn">Тоглох!</button>
+                </article>
+
+                <article class="toon-card card-yellow">
+                    <div class="card-icon">🤖</div>
+                    <h3>Мэдээллийн Сан</h3>
+                    <p>Өгөгдлүүдийг хадгалах, цэгцлэх нууц сав.</p>
+                    <button class="action-btn">Нээх!</button>
+                </article>
+
+                <article class="toon-card card-green">
+                    <div class="card-icon">🧩</div>
+                    <h3>Алгоритм</h3>
+                    <p>Сэтгэхүй болон кодын сүлжээг амилуулах хөгжилтэй оньсого бодлого</p>
+                    <button class="action-btn">Бодох!</button>
+                </article>
+            </section>
+
+            <!-- GALLERY (Lab 6) - 3 ширхэг карт болгов -->
+            <h2 class="section-title">🖼️ Зургийн цомог</h2>
+            <section id="gallery" class="gallery" aria-label="Зургийн цомог">
+                <div class="flip-card" style="--i:0" tabindex="0">
+                    <div class="flip-inner">
+                        <div class="face front"><img src="img/photo1.png" alt="Зураг 1"></div>
+                        <div class="face back"><p>Зураг 1</p></div>
+                    </div>
+                    <button class="flip-btn" type="button">Эргүүлэх</button>
+                </div>
+
+                <div class="flip-card" style="--i:1" tabindex="0">
+                    <div class="flip-inner">
+                        <div class="face front"><img src="img/photo2.jpg" alt="Зураг 2"></div>
+                        <div class="face back"><p>Зураг 2</p></div>
+                    </div>
+                    <button class="flip-btn" type="button">Эргүүлэх</button>
+                </div>
+
+                <div class="flip-card" style="--i:2" tabindex="0">
+                    <div class="flip-inner">
+                        <div class="face front"><img src="img/photo3.png" alt="Зураг 3"></div>
+                        <div class="face back"><p>Зураг 3</p></div>
+                    </div>
+                    <button class="flip-btn" type="button">Эргүүлэх</button>
+                </div>
+            </section>
+
+            <!-- MULTIMEDIA - Пенгуиний видеог холбов -->
+            <section id="media" class="media-section">
+                <h2>🎬 Видео</h2>
+                <video controls preload="metadata" poster="img/photo1.png">
+                    <source src="video/Penguin meme (original)_1080p.mp4" type="video/mp4">
+                    <source src="video/Penguin meme (original) - Do it (1080p).webm" type="video/webm">
+                    <track kind="subtitles" src="video/clip.mn.vtt" srclang="mn" label="Монгол" default>
+                    Таны хөтөч video-г дэмжихгүй байна.
+                </video>
+
+                <h2>🗺️ Газрын зураг</h2>
+                <iframe title="Улаанбаатар хотын газрын зураг" loading="lazy"
+                    sandbox="allow-scripts allow-same-origin"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=106.80%2C47.86%2C107.05%2C47.97&amp;layer=mapnik"></iframe>
+
+                <h2>🎨 SVG</h2>
+                <svg class="demo-svg" viewBox="0 0 120 120" role="img" aria-labelledby="svg-t">
+                    <title id="svg-t">Эргэлддэг од</title>
+                    <polygon class="spin-star" points="60,8 74,44 112,46 82,70 92,108 60,86 28,108 38,70 8,46 46,44"
+                            fill="#facc15" stroke="#ca8a04" stroke-width="4" stroke-linejoin="round"/>
+                </svg>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="side-card card-blue">
+                <h3>🍭 Миний Сонирхол</h3>
+                <ul class="toon-list">
+                    <li>🎬 Анимашн кино үзэх</li>
+                    <li>🎨 Төрөл бүрийн өнгөөр зурах</li>
+                    <li>🕹️ Вэб дизайн хийх</li>
+                </ul>
+            </div>
+
+            <div class="side-card card-purple">
+                <h3>🏆 Миний Оноо</h3>
+                <table class="toon-table">
+                    <thead><tr><th>Хичээл</th><th>Оноо</th></tr></thead>
+                    <tbody>
+                        <tr><td>Веб зохиомж</td><td><span class="score-pill">95</span></td></tr>
+                        <tr><td>Мэдээллийн сан</td><td><span class="score-pill">88</span></td></tr>
+                        <tr><td>Алгоритм</td><td><span class="score-pill">92</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="toon-footer">
+        <p>🎉 2026 Тоглоом Шиг Веб. Мультмедиа 2р курс Д.Бадамдорж Оюутны код B251880029 🎉</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
